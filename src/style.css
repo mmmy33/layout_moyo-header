@@ -1,19 +1,15 @@
-/* #region ZERO */
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  padding-bottom: 2000px;
+/* #region page */
+html{
+  font-family: Roboto, Arial, sans-serif;
 }
 
-.wrapper {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+body {
+  margin: 0;
 }
 
 :root {
   --header-height: 60px;
+  --hover-color: #00acdc;
 }
 
 a {
@@ -21,7 +17,7 @@ a {
   text-decoration: none;
 }
 
-/* #endregion ZERO */
+/* #endregion page */
 
 .header {
   display: flex;
@@ -56,7 +52,7 @@ nav {
 }
 
 .nav_item:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .nav_link {
@@ -74,15 +70,12 @@ nav {
 .is-active::after {
   content: '';
   position: absolute;
-  border: 4px solid #00acdc;
+  height: 4px;
+  background: var(--hover-color);
   border-radius: 8px;
-  width: calc(100% - 5px);
+  width: 100%;
   bottom: 0;
   left: 0;
-  opacity: 0;
-}
-
-.is-active:hover::after {
-  bottom: 0;
   opacity: 1;
 }
+
